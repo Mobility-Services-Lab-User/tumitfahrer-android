@@ -38,6 +38,11 @@
     <string name="from">From</string>
     <string name="to">To</string>
     <string name="search">Search</string>
+    <!-- Push Notification / Pebble Contants -->
+    <string name="deviceNotSupported">This device is not supported.</string>
+    <string name="googlePlayServiceNotFound">No valid Google Play Services APK found.</string>
+    <!-- Notification Engine Strings -->
+    <string name="messageTitle">TUMitfahrer</string>
 
     <!-- Department array -->
     <string-array name="department_array">

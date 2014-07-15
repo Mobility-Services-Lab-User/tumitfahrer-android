@@ -13,7 +13,7 @@ import retrofit.http.Path;
 public interface MessagesAPIService {
 
     @POST("/rides/{rideId}/conversations/{conversationId}/messages")
-    public void getMessages(
+    public void createMessage(
             @Header("apiKey") String apiKey,
             @Path("rideId") int rideId,
             @Path("conversationId") int conversationId,

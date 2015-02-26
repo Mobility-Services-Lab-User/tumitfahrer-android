@@ -43,3 +43,27 @@
 -keepnames class * implements android.os.Parcelable {
     public static final ** CREATOR;
 }
+
+-dontwarn com.facebook.android.BuildConfig
+
+-dontwarn rx.**
+
+-dontwarn okio.**
+
+-dontwarn com.squareup.okhttp.*
+
+-dontwarn retrofit.appengine.UrlFetchClient
+
+-keepattributes Annotation
+
+-keep class retrofit.** { *; }
+
+-keepclasseswithmembers class * {
+
+@retrofit.http.* <methods>; }
+-keepattributes Signature
+
+-dontwarn com.amazonaws.**
+-dontwarn org.apache.http.annotation.**
+-dontwarn com.fasterxml.**
+

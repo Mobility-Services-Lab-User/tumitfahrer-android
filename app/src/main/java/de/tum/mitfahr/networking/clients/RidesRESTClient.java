@@ -26,6 +26,7 @@ import de.tum.mitfahr.events.UpdateRideEvent;
 import de.tum.mitfahr.networking.api.RidesAPIService;
 import de.tum.mitfahr.networking.events.RequestFailedEvent;
 import de.tum.mitfahr.networking.models.Ride;
+import de.tum.mitfahr.networking.models.requests.AcceptRideRequest;
 import de.tum.mitfahr.networking.models.requests.JoinRideReqest;
 import de.tum.mitfahr.networking.models.requests.OfferRideRequest;
 import de.tum.mitfahr.networking.models.requests.RespondRideReqest;
@@ -290,8 +291,8 @@ public class RidesRESTClient extends AbstractRESTClient {
     };
 
     public void acceptRequest(int rideId, int passengerId, int requestId, String userAPIKey) {
-        ridesAPIService.acceptRideRequest(userAPIKey, rideId, requestId, passengerId, acceptRequestCallback);
-
+        AcceptRideRequest request = new AcceptRideRequest(passengerId,1);
+        ridesAPIService.acceptRideRequest(userAPIKey, rideId, requestId, request, acceptRequestCallback);
     }
 
     public void rejectRequest(int rideId, int requestId, String userAPIKey) {

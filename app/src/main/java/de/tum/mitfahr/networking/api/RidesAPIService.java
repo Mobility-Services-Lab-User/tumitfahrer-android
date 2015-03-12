@@ -1,6 +1,7 @@
 package de.tum.mitfahr.networking.api;
 
 import de.tum.mitfahr.networking.models.Ride;
+import de.tum.mitfahr.networking.models.requests.AcceptRideRequest;
 import de.tum.mitfahr.networking.models.requests.JoinRideReqest;
 import de.tum.mitfahr.networking.models.requests.OfferRideRequest;
 import de.tum.mitfahr.networking.models.requests.RespondRideReqest;
@@ -108,7 +109,7 @@ public interface RidesAPIService {
             @Header("apiKey") String apiKey,
             @Path("rideId") int rideId,
             @Path("requestId") int requestId,
-            @Query("passenger_id") int passengerId,
+            @Body AcceptRideRequest request,
             Callback<AcceptRideResponse> callback
     );
 
